@@ -1,0 +1,718 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JobHunt AI | Your AI Job Application Command Center</title>
+    <meta
+      name="description"
+      content="Join the JobHunt AI beta. Upload your resume, search jobs, and generate ATS-optimized CVs and personalized cover letters in minutes."
+    />
+    <meta name="theme-color" content="#09090b" />
+    <meta property="og:title" content="JobHunt AI by NexGen Develop" />
+    <meta
+      property="og:description"
+      content="Apply to jobs faster with AI-powered tailored applications."
+    />
+    <meta property="og:type" content="website" />
+    <script>
+      tailwind = {
+        config: {
+          darkMode: "class",
+          theme: {
+            extend: {
+              fontFamily: {
+                sans: ["Inter", "ui-sans-serif", "system-ui", "sans-serif"],
+              },
+              colors: {
+                ink: "#09090b",
+                frost: "#f8fafc",
+                mint: "#23d3a5",
+                cyan: "#42c6ff",
+                violet: "#8b5cf6",
+                ember: "#fb7185",
+              },
+              boxShadow: {
+                glow: "0 0 70px rgba(35, 211, 165, 0.22)",
+                panel: "0 24px 80px rgba(15, 23, 42, 0.14)",
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body
+    class="bg-frost text-zinc-950 antialiased transition-colors duration-300 dark:bg-ink dark:text-white"
+  >
+    <div class="site-glow" aria-hidden="true"></div>
+
+    <header
+      class="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-white/70 backdrop-blur-2xl dark:bg-zinc-950/70"
+    >
+      <nav
+        class="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8"
+        aria-label="Main navigation"
+      >
+        <a href="#hero" class="flex items-center gap-3 font-semibold">
+          <span
+            class="grid h-9 w-9 place-items-center rounded-xl bg-zinc-950 text-white shadow-glow dark:bg-white dark:text-zinc-950"
+            >J</span
+          >
+          <span class="leading-tight">
+            <span class="block text-sm text-zinc-500 dark:text-zinc-400"
+              >NexGen Develop</span
+            >
+            <span class="block">JobHunt AI</span>
+          </span>
+        </a>
+
+        <div class="hidden items-center gap-8 text-sm font-medium lg:flex">
+          <a href="#features" class="nav-link">Features</a>
+          <a href="#workflow" class="nav-link">How It Works</a>
+          <a href="#demo" class="nav-link">Demo</a>
+          <a href="#pricing" class="nav-link">Pricing</a>
+          <a href="#faq" class="nav-link">FAQ</a>
+        </div>
+
+        <div class="hidden items-center gap-3 lg:flex">
+          <button
+            class="icon-button"
+            id="themeToggle"
+            aria-label="Toggle dark mode"
+          >
+            <i data-lucide="sun" class="theme-sun h-4 w-4"></i>
+            <i data-lucide="moon" class="theme-moon hidden h-4 w-4"></i>
+          </button>
+          <a href="#waitlist" class="button-primary">Join Beta</a>
+        </div>
+
+        <button
+          class="icon-button lg:hidden"
+          id="menuToggle"
+          aria-label="Open menu"
+        >
+          <i data-lucide="menu" class="h-5 w-5"></i>
+        </button>
+      </nav>
+
+      <div
+        id="mobileMenu"
+        class="hidden border-t border-zinc-200 bg-white/95 px-4 py-4 shadow-panel backdrop-blur-xl dark:border-white/10 dark:bg-zinc-950/95 lg:hidden"
+      >
+        <div class="mx-auto grid max-w-7xl gap-3 text-sm font-medium">
+          <a href="#features" class="mobile-link">Features</a>
+          <a href="#workflow" class="mobile-link">How It Works</a>
+          <a href="#demo" class="mobile-link">Demo</a>
+          <a href="#pricing" class="mobile-link">Pricing</a>
+          <a href="#faq" class="mobile-link">FAQ</a>
+          <a href="#waitlist" class="button-primary mt-2 justify-center"
+            >Join Beta</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="hero" class="hero-section section-pad overflow-hidden pt-32">
+        <div
+          class="mx-auto grid max-w-7xl items-center gap-14 px-4 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:px-8"
+        >
+          <div class="reveal">
+            <div class="eyebrow">
+              <i data-lucide="sparkles" class="h-4 w-4"></i>
+              Your AI Job Application Command Center
+            </div>
+            <h1
+              class="mt-6 max-w-4xl text-5xl font-black tracking-tight sm:text-6xl lg:text-7xl"
+            >
+              Apply to jobs faster with AI-powered tailored applications.
+            </h1>
+            <p
+              class="mt-6 max-w-2xl text-lg leading-8 text-zinc-600 dark:text-zinc-300"
+            >
+              Upload your resume, search jobs, and instantly generate
+              ATS-optimized CVs and personalized cover letters for every
+              application.
+            </p>
+            <div class="mt-9 flex flex-col gap-3 sm:flex-row">
+              <a href="#waitlist" class="button-primary button-lg">
+                <i data-lucide="rocket" class="h-5 w-5"></i>
+                Get Early Access
+              </a>
+              <a href="#demo" class="button-secondary button-lg">
+                <i data-lucide="play-circle" class="h-5 w-5"></i>
+                Watch Demo
+              </a>
+            </div>
+            <div class="mt-10 grid max-w-xl grid-cols-3 gap-3 text-sm">
+              <div class="proof-pill">Private beta</div>
+              <div class="proof-pill">ATS-focused</div>
+              <div class="proof-pill">Desktop-first</div>
+            </div>
+          </div>
+
+          <div class="relative reveal delay-150">
+            <div class="floating-card left-0 top-10 hidden md:block">
+              <span class="status-dot"></span>
+              92% match score
+            </div>
+            <div class="floating-card bottom-12 right-2 hidden md:block">
+              <i data-lucide="file-check-2" class="h-4 w-4 text-mint"></i>
+              Cover letter ready
+            </div>
+            <div class="dashboard-shell">
+              <div class="desktop-bar">
+                <span></span><span></span><span></span>
+                <p>JobHunt AI Desktop</p>
+              </div>
+              <div class="dashboard-grid">
+                <aside class="dashboard-sidebar">
+                  <div class="mini-logo">JH</div>
+                  <div class="side-link active">Pipeline</div>
+                  <div class="side-link">AI Writer</div>
+                  <div class="side-link">Gmail Jobs</div>
+                  <div class="side-link">Analytics</div>
+                </aside>
+                <div class="dashboard-main">
+                  <div class="dashboard-top">
+                    <div>
+                      <p class="tiny-label">Today</p>
+                      <h3>Frontend Developer Search</h3>
+                    </div>
+                    <span class="score-badge">5 min/app</span>
+                  </div>
+                  <div class="job-card featured">
+                    <div>
+                      <p class="tiny-label">Remote • SaaS</p>
+                      <h4>Junior Product Engineer</h4>
+                    </div>
+                    <span>94%</span>
+                  </div>
+                  <div class="mock-row">
+                    <div class="mock-panel">
+                      <p>ATS CV</p>
+                      <div class="line w-10/12"></div>
+                      <div class="line w-8/12"></div>
+                      <div class="line w-11/12"></div>
+                    </div>
+                    <div class="mock-panel">
+                      <p>Cover Letter</p>
+                      <div class="line w-9/12"></div>
+                      <div class="line w-7/12"></div>
+                      <div class="line w-10/12"></div>
+                    </div>
+                  </div>
+                  <div class="analytics-strip">
+                    <span>18 saved jobs</span>
+                    <span>7 tailored docs</span>
+                    <span>3 interviews</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="problem" class="section-pad">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="section-heading reveal">
+            <span class="eyebrow">The Problem</span>
+            <h2>
+              Traditional job applications are repetitive, exhausting, and slow.
+            </h2>
+            <p>
+              Most job seekers spend 30-90 minutes per application. JobHunt AI
+              reduces that to under 5 minutes.
+            </p>
+          </div>
+          <div class="mt-14 grid gap-5 lg:grid-cols-[1fr_auto_1fr]">
+            <div class="comparison-card reveal">
+              <div class="comparison-head manual">
+                <i data-lucide="timer-reset" class="h-5 w-5"></i>
+                Manual Process
+              </div>
+              <ul class="timeline-list">
+                <li>Searching endlessly across job boards</li>
+                <li>Rewriting resumes for each role</li>
+                <li>Rewriting cover letters from scratch</li>
+                <li>Repeating the same application steps</li>
+                <li>Losing hours without a clear pipeline</li>
+              </ul>
+            </div>
+            <div class="vs-pill reveal delay-100">VS</div>
+            <div class="comparison-card accent reveal delay-150">
+              <div class="comparison-head ai">
+                <i data-lucide="zap" class="h-5 w-5"></i>
+                JobHunt AI
+              </div>
+              <ul class="timeline-list">
+                <li>AI-powered role matching</li>
+                <li>Instant tailored CV generation</li>
+                <li>Instant personalized cover letters</li>
+                <li>Organized workflow and tracker</li>
+                <li>Applications prepared in minutes</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="workflow"
+        class="section-pad bg-zinc-100/60 dark:bg-white/[0.03]"
+      >
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="section-heading reveal">
+            <span class="eyebrow">How It Works</span>
+            <h2>
+              From resume upload to tailored application in one focused
+              workflow.
+            </h2>
+          </div>
+          <div
+            class="workflow-line mt-14 grid gap-5 md:grid-cols-2 xl:grid-cols-4"
+          >
+            <article class="step-card reveal">
+              <span>01</span>
+              <i data-lucide="upload-cloud" class="h-7 w-7 text-mint"></i>
+              <h3>Upload Resume & Cover Letter</h3>
+              <p>
+                AI analyzes your skills, experience, achievements, and
+                high-value keywords.
+              </p>
+            </article>
+            <article class="step-card reveal delay-100">
+              <span>02</span>
+              <i data-lucide="search" class="h-7 w-7 text-cyan"></i>
+              <h3>Search Jobs</h3>
+              <p>
+                Filter by role, internship, remote, location, junior, senior,
+                and career path.
+              </p>
+            </article>
+            <article class="step-card reveal delay-150">
+              <span>03</span>
+              <i data-lucide="wand-sparkles" class="h-7 w-7 text-violet"></i>
+              <h3>Generate Applications</h3>
+              <p>
+                Create ATS-optimized CVs, recruiter-friendly formatting, and
+                keyword-matched letters.
+              </p>
+            </article>
+            <article class="step-card reveal delay-200">
+              <span>04</span>
+              <i data-lucide="send" class="h-7 w-7 text-ember"></i>
+              <h3>Review & Apply</h3>
+              <p>
+                Review polished documents, track every opportunity, and apply
+                faster.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="demo" class="section-pad">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="section-heading reveal">
+            <span class="eyebrow">Product Showcase</span>
+            <h2>
+              A premium desktop workspace for serious job search momentum.
+            </h2>
+            <p>
+              Search jobs, parse Gmail leads, generate documents, and keep the
+              whole workflow organized.
+            </p>
+          </div>
+          <div class="showcase mt-14 reveal">
+            <div class="showcase-tabs" role="list" aria-label="Product views">
+              <button class="tab active" data-view="dashboard">
+                Dashboard
+              </button>
+              <button class="tab" data-view="gmail">Gmail Pipeline</button>
+              <button class="tab" data-view="generator">AI Generator</button>
+              <button class="tab" data-view="tracker">Tracker</button>
+            </div>
+            <div class="showcase-screen">
+              <div class="screen-panel visible" id="dashboard-view">
+                <div class="screen-header">
+                  <h3>Web Job Search dashboard</h3>
+                  <span>Live workflow</span>
+                </div>
+                <div class="product-grid">
+                  <div class="product-card wide">
+                    <p class="tiny-label">Matched roles</p>
+                    <h4>23 new software roles found</h4>
+                    <div class="chart-bars">
+                      <span></span><span></span><span></span><span></span
+                      ><span></span>
+                    </div>
+                  </div>
+                  <div class="product-card">
+                    <p class="tiny-label">Best match</p>
+                    <h4>96%</h4>
+                    <p>
+                      AI evaluates resume fit, missing keywords, and seniority
+                      alignment.
+                    </p>
+                  </div>
+                  <div class="product-card">
+                    <p class="tiny-label">Theme</p>
+                    <h4>Dark / Light</h4>
+                    <p>
+                      Built for long application sessions without visual noise.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="screen-panel" id="gmail-view">
+                <div class="screen-header">
+                  <h3>Gmail Job Pipeline</h3>
+                  <span>Email parsing</span>
+                </div>
+                <div class="mail-list">
+                  <div>
+                    <strong>Interview invite</strong
+                    ><span>Parsed into tracker</span>
+                  </div>
+                  <div>
+                    <strong>Application received</strong
+                    ><span>Status updated</span>
+                  </div>
+                  <div>
+                    <strong>Recruiter follow-up</strong
+                    ><span>Action required</span>
+                  </div>
+                </div>
+              </div>
+              <div class="screen-panel" id="generator-view">
+                <div class="screen-header">
+                  <h3>AI CV & Cover Letter Generator</h3>
+                  <span>ATS-ready</span>
+                </div>
+                <div class="generator-layout">
+                  <div class="doc-preview"></div>
+                  <div class="ai-notes">
+                    <h4>Tailoring changes</h4>
+                    <p>
+                      Added role keywords, quantified achievements, and aligned
+                      opening paragraph to the company brief.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="screen-panel" id="tracker-view">
+                <div class="screen-header">
+                  <h3>Tracker Widgets</h3>
+                  <span>Momentum view</span>
+                </div>
+                <div class="tracker-kanban">
+                  <div>Saved</div>
+                  <div>Generated</div>
+                  <div>Applied</div>
+                  <div>Interview</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="features"
+        class="section-pad bg-zinc-100/60 dark:bg-white/[0.03]"
+      >
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="section-heading reveal">
+            <span class="eyebrow">Benefits</span>
+            <h2>
+              Everything you need to apply smarter, faster, and with more
+              control.
+            </h2>
+          </div>
+          <div class="mt-14 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+            <article class="feature-card reveal">
+              <i data-lucide="file-text"></i>
+              <h3>AI-tailored CV generation</h3>
+              <p>
+                Generate role-specific resumes that speak directly to each job
+                description.
+              </p>
+            </article>
+            <article class="feature-card reveal">
+              <i data-lucide="mail-edit"></i>
+              <h3>Personalized cover letters</h3>
+              <p>
+                Create concise, polished cover letters that sound human and
+                relevant.
+              </p>
+            </article>
+            <article class="feature-card reveal">
+              <i data-lucide="scan-search"></i>
+              <h3>ATS optimization</h3>
+              <p>
+                Match keywords, formatting, and evidence to improve recruiter
+                readability.
+              </p>
+            </article>
+            <article class="feature-card reveal">
+              <i data-lucide="layout-dashboard"></i>
+              <h3>Job search dashboard</h3>
+              <p>
+                Keep role discovery, saved jobs, and application progress in one
+                place.
+              </p>
+            </article>
+            <article class="feature-card reveal">
+              <i data-lucide="inbox"></i>
+              <h3>Gmail job parsing</h3>
+              <p>
+                Turn job emails and recruiter threads into structured pipeline
+                actions.
+              </p>
+            </article>
+            <article class="feature-card reveal">
+              <i data-lucide="gauge"></i>
+              <h3>Match scoring</h3>
+              <p>
+                See which roles are strongest before spending energy on
+                documents.
+              </p>
+            </article>
+            <article class="feature-card reveal">
+              <i data-lucide="workflow"></i>
+              <h3>Productivity workflow</h3>
+              <p>
+                Move from search to generated assets without context switching.
+              </p>
+            </article>
+            <article class="feature-card reveal">
+              <i data-lucide="timer"></i>
+              <h3>Fast applications</h3>
+              <p>
+                Reduce 30-90 minute application cycles to a focused five-minute
+                flow.
+              </p>
+            </article>
+            <article class="feature-card reveal">
+              <i data-lucide="columns-3"></i>
+              <h3>Organized pipeline</h3>
+              <p>
+                Track saved, drafted, applied, interview, and follow-up stages
+                cleanly.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-pad">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="section-heading reveal">
+            <span class="eyebrow">Beta Feedback</span>
+            <h2>Built for job seekers who want leverage, not more admin.</h2>
+          </div>
+          <div class="mt-14 grid gap-5 md:grid-cols-3">
+            <figure class="testimonial reveal">
+              <div class="avatar">AM</div>
+              <blockquote>“This saved me hours every week.”</blockquote>
+              <figcaption>Alex M. • Graduate developer</figcaption>
+              <div class="stars">★★★★★</div>
+            </figure>
+            <figure class="testimonial reveal delay-100">
+              <div class="avatar">SK</div>
+              <blockquote>“The fastest job workflow I’ve used.”</blockquote>
+              <figcaption>Sofia K. • Product analyst</figcaption>
+              <div class="stars">★★★★★</div>
+            </figure>
+            <figure class="testimonial reveal delay-150">
+              <div class="avatar">TN</div>
+              <blockquote>
+                “Finally a clean AI job application tool.”
+              </blockquote>
+              <figcaption>Thabo N. • Career switcher</figcaption>
+              <div class="stars">★★★★★</div>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="pricing"
+        class="section-pad bg-zinc-100/60 dark:bg-white/[0.03]"
+      >
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="section-heading reveal">
+            <span class="eyebrow">Pricing Preview</span>
+            <h2>Join early and lock in founding-user advantages.</h2>
+            <p>
+              Early founding users will receive lifetime discounted pricing.
+            </p>
+          </div>
+          <div class="mx-auto mt-14 grid max-w-4xl gap-5 md:grid-cols-2">
+            <article class="price-card reveal">
+              <span>Free Beta</span>
+              <h3>$0</h3>
+              <p>
+                For early users who want to test the workflow before launch.
+              </p>
+              <a href="#waitlist" class="button-secondary justify-center"
+                >Join Waitlist</a
+              >
+            </article>
+            <article class="price-card highlighted reveal delay-100">
+              <span>Founding Member</span>
+              <h3>Lifetime discount</h3>
+              <p>
+                Priority beta access, early feature voting, and launch pricing
+                protection.
+              </p>
+              <a href="#waitlist" class="button-primary justify-center"
+                >Get Early Access</a
+              >
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="faq" class="section-pad">
+        <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+          <div class="section-heading reveal">
+            <span class="eyebrow">FAQ</span>
+            <h2>Questions before joining the beta.</h2>
+          </div>
+          <div class="mt-12 space-y-3">
+            <div class="faq-item reveal">
+              <button class="faq-question">
+                Does it auto apply?<i data-lucide="chevron-down"></i>
+              </button>
+              <div class="faq-answer">
+                No. JobHunt AI helps prepare tailored documents and organize
+                your workflow. You stay in control before submitting.
+              </div>
+            </div>
+            <div class="faq-item reveal">
+              <button class="faq-question">
+                How does the AI work?<i data-lucide="chevron-down"></i>
+              </button>
+              <div class="faq-answer">
+                It analyzes your resume, the job description, and role keywords,
+                then drafts relevant CV and cover letter content.
+              </div>
+            </div>
+            <div class="faq-item reveal">
+              <button class="faq-question">
+                Is my data secure?<i data-lucide="chevron-down"></i>
+              </button>
+              <div class="faq-answer">
+                The product is being designed with privacy-first document
+                handling and clear user control over uploaded files.
+              </div>
+            </div>
+            <div class="faq-item reveal">
+              <button class="faq-question">
+                Can I upload my own resume?<i data-lucide="chevron-down"></i>
+              </button>
+              <div class="faq-answer">
+                Yes. The core workflow starts with your existing resume and
+                optional cover letter templates.
+              </div>
+            </div>
+            <div class="faq-item reveal">
+              <button class="faq-question">
+                Will there be a web version?<i data-lucide="chevron-down"></i>
+              </button>
+              <div class="faq-answer">
+                The beta is desktop-first, with a web version planned if
+                waitlist demand supports it.
+              </div>
+            </div>
+            <div class="faq-item reveal">
+              <button class="faq-question">
+                Is there a free beta?<i data-lucide="chevron-down"></i>
+              </button>
+              <div class="faq-answer">
+                Yes. Early users can join the free beta and help shape the
+                launch roadmap.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="waitlist" class="section-pad">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="final-cta reveal">
+            <div>
+              <span class="eyebrow">Join The Beta</span>
+              <h2>Start applying smarter.</h2>
+              <p>
+                Join the beta and experience the future of AI-powered job
+                applications.
+              </p>
+            </div>
+            <form
+              id="waitlistForm"
+              class="waitlist-form"
+              aria-label="Join beta waitlist"
+            >
+              <input
+                type="email"
+                id="emailInput"
+                placeholder="you@example.com"
+                required
+                aria-label="Email address"
+              />
+              <button type="submit" class="button-primary">
+                <i data-lucide="arrow-right" class="h-4 w-4"></i>
+                Join Beta
+              </button>
+              <a href="#demo" class="button-secondary justify-center">
+                <i data-lucide="play-circle" class="h-4 w-4"></i>
+                Watch Demo
+              </a>
+              <p id="formMessage" class="form-message" role="status"></p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-zinc-200 py-10 dark:border-white/10">
+      <div
+        class="mx-auto flex max-w-7xl flex-col gap-8 px-4 sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:px-8"
+      >
+        <div>
+          <p class="font-bold">NexGen Develop</p>
+          <p class="mt-1 text-sm text-zinc-500 dark:text-zinc-400">
+            JobHunt AI © 2026. All rights reserved.
+          </p>
+        </div>
+        <div
+          class="flex flex-wrap gap-5 text-sm text-zinc-500 dark:text-zinc-400"
+        >
+          <a href="#features">Features</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#faq">FAQ</a>
+          <a href="mailto:hello@nexgendevelop.com">hello@nexgendevelop.com</a>
+          <a href="#" aria-label="LinkedIn">LinkedIn</a>
+          <a href="#" aria-label="GitHub">GitHub</a>
+          <a href="#" aria-label="Instagram">Instagram</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
