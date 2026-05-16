@@ -283,97 +283,242 @@
               most.
             </p>
           </div>
-          <div class="tool-showcase-grid mt-14">
-            <article class="tool-showcase-card large reveal">
-              <div class="tool-image-placeholder tracker">
-                <div class="placeholder-window">
-                  <div class="placeholder-row strong"></div>
-                  <div class="kanban-preview">
-                    <span>Saved</span>
-                    <span>Prepared</span>
-                    <span>Submitted</span>
+          <div class="feature-tabs-showcase mt-14 reveal">
+            <div
+              class="feature-tabbar"
+              role="tablist"
+              aria-label="JobHunt AI tools"
+            >
+              <button
+                class="feature-tab active"
+                data-feature="tracker"
+                type="button"
+              >
+                <i data-lucide="briefcase-business"></i>
+                Job Tracker
+              </button>
+              <button class="feature-tab" data-feature="resume" type="button">
+                <i data-lucide="file-text"></i>
+                AI Resume Builder
+              </button>
+              <button class="feature-tab" data-feature="tailored" type="button">
+                <i data-lucide="fingerprint"></i>
+                Job Tailored Resume
+              </button>
+              <button class="feature-tab" data-feature="autofill" type="button">
+                <i data-lucide="pen-line"></i>
+                Autofill Applications
+              </button>
+              <button class="feature-tab" data-feature="checker" type="button">
+                <i data-lucide="thumbs-up"></i>
+                Resume Checker
+              </button>
+            </div>
+
+            <div class="feature-tab-panels">
+              <article
+                class="feature-tab-panel active"
+                data-feature-panel="tracker"
+              >
+                <div class="feature-visual-shell">
+                  <img
+                    src="assets/features/job-tracker.png"
+                    alt="JobHunt AI job tracker dashboard"
+                    onload="this.nextElementSibling.hidden = true"
+                    onerror="this.hidden = true"
+                  />
+                  <div class="feature-fallback tracker">
+                    <div class="mini-kanban">
+                      <span>Saved</span><span>Reviewed</span
+                      ><span>Prepared</span><span>Submitted</span
+                      ><span>Interview</span>
+                    </div>
                   </div>
-                  <div class="placeholder-row"></div>
-                  <div class="placeholder-row short"></div>
                 </div>
-              </div>
-              <div class="tool-copy">
-                <span>01</span>
-                <h3>Job Tracker</h3>
-                <p>
-                  Track opportunities from saved to prepared to submitted, with
-                  every role organized in one clean pipeline.
-                </p>
-              </div>
-            </article>
-
-            <article class="tool-showcase-card reveal delay-100">
-              <div class="tool-image-placeholder resume">
-                <div class="doc-mini"></div>
-                <div class="doc-lines">
-                  <span></span><span></span><span></span>
+                <div class="feature-description-grid">
+                  <div class="feature-description active">
+                    <h3>Application Pipeline</h3>
+                    <p>
+                      Organize jobs across saved, reviewed, prepared, submitted,
+                      and interview stages.
+                    </p>
+                  </div>
+                  <div class="feature-description">
+                    <h3>Status Tracking</h3>
+                    <p>
+                      See company, role, location, match score, and next action
+                      at a glance.
+                    </p>
+                  </div>
+                  <div class="feature-description">
+                    <h3>Progress Overview</h3>
+                    <p>
+                      Track total applications, active opportunities,
+                      interviews, and offers.
+                    </p>
+                  </div>
                 </div>
-              </div>
-              <div class="tool-copy">
-                <span>02</span>
-                <h3>AI Resume Builder</h3>
-                <p>
-                  Generate a cleaner, role-focused CV from your experience and
-                  the job requirements.
-                </p>
-              </div>
-            </article>
+              </article>
 
-            <article class="tool-showcase-card reveal delay-150">
-              <div class="tool-image-placeholder tailored">
-                <div class="match-orbit">94%</div>
-                <div class="keyword-strip">
-                  <span>React</span><span>Remote</span><span>Junior</span>
+              <article class="feature-tab-panel" data-feature-panel="resume">
+                <div class="feature-visual-shell">
+                  <img
+                    src="assets/features/ai-resume-builder.png"
+                    alt="JobHunt AI resume builder interface"
+                    onload="this.nextElementSibling.hidden = true"
+                    onerror="this.hidden = true"
+                  />
+                  <div class="feature-fallback resume">
+                    <div class="resume-preview-card"></div>
+                    <div class="suggestion-stack"></div>
+                  </div>
                 </div>
-              </div>
-              <div class="tool-copy">
-                <span>03</span>
-                <h3>Tailored Applications</h3>
-                <p>
-                  Match your CV and cover letter to each role instead of sending
-                  the same generic documents.
-                </p>
-              </div>
-            </article>
-
-            <article class="tool-showcase-card reveal delay-100">
-              <div class="tool-image-placeholder cover">
-                <div class="letter-card"></div>
-                <div class="letter-card offset"></div>
-              </div>
-              <div class="tool-copy">
-                <span>04</span>
-                <h3>Cover Letter Generator</h3>
-                <p>
-                  Create personalized cover letters that explain your fit
-                  clearly and quickly.
-                </p>
-              </div>
-            </article>
-
-            <article class="tool-showcase-card large reveal delay-150">
-              <div class="tool-image-placeholder smart">
-                <div class="browser-preview">
-                  <div class="browser-top"></div>
-                  <div class="field-line"></div>
-                  <div class="field-line"></div>
-                  <button>Open job link</button>
+                <div class="feature-description-grid">
+                  <div class="feature-description active">
+                    <h3>ATS-Friendly Resume</h3>
+                    <p>
+                      Create a cleaner resume focused on the job, your skills,
+                      and recruiter readability.
+                    </p>
+                  </div>
+                  <div class="feature-description">
+                    <h3>AI Suggestions</h3>
+                    <p>
+                      Receive action verb, keyword, and skills improvements
+                      before exporting.
+                    </p>
+                  </div>
+                  <div class="feature-description">
+                    <h3>Export Ready</h3>
+                    <p>
+                      Download the prepared resume as PDF or DOCX when your
+                      application is ready.
+                    </p>
+                  </div>
                 </div>
-              </div>
-              <div class="tool-copy">
-                <span>05</span>
-                <h3>Smart Apply Assist</h3>
-                <p>
-                  Prepare your generated documents, copy the application bundle,
-                  open the job link, and submit manually when ready.
-                </p>
-              </div>
-            </article>
+              </article>
+
+              <article class="feature-tab-panel" data-feature-panel="tailored">
+                <div class="feature-visual-shell">
+                  <img
+                    src="assets/features/job-tailored-resume.png"
+                    alt="JobHunt AI tailored resume match view"
+                    onload="this.nextElementSibling.hidden = true"
+                    onerror="this.hidden = true"
+                  />
+                  <div class="feature-fallback tailored">
+                    <div class="match-score-preview">92%</div>
+                    <div class="match-breakdown-preview">
+                      <span>Keyword Match</span><span>Title Match</span
+                      ><span>Responsibilities</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="feature-description-grid">
+                  <div class="feature-description active">
+                    <h3>Tailored Resume</h3>
+                    <p>
+                      Adapt your resume to each job so the most relevant
+                      experience is easier to see.
+                    </p>
+                  </div>
+                  <div class="feature-description">
+                    <h3>Job Match Score</h3>
+                    <p>
+                      Show how strongly your resume aligns with the role before
+                      you apply.
+                    </p>
+                  </div>
+                  <div class="feature-description">
+                    <h3>Keyword Integration</h3>
+                    <p>
+                      Highlight important job keywords and missing phrases from
+                      the posting.
+                    </p>
+                  </div>
+                </div>
+              </article>
+
+              <article class="feature-tab-panel" data-feature-panel="autofill">
+                <div class="feature-visual-shell">
+                  <img
+                    src="assets/features/autofill-applications.png"
+                    alt="JobHunt AI autofill application assistant"
+                    onload="this.nextElementSibling.hidden = true"
+                    onerror="this.hidden = true"
+                  />
+                  <div class="feature-fallback autofill">
+                    <div class="browser-form-preview">
+                      <span></span><span></span><span></span
+                      ><button>Review before submit</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="feature-description-grid">
+                  <div class="feature-description active">
+                    <h3>Smart Apply Assist</h3>
+                    <p>
+                      Prepare answers, documents, and job links from one focused
+                      application screen.
+                    </p>
+                  </div>
+                  <div class="feature-description">
+                    <h3>Human Approval</h3>
+                    <p>
+                      You review every field and document before anything is
+                      submitted.
+                    </p>
+                  </div>
+                  <div class="feature-description">
+                    <h3>Application Bundle</h3>
+                    <p>
+                      Copy generated CV and cover letter content when moving to
+                      the job page.
+                    </p>
+                  </div>
+                </div>
+              </article>
+
+              <article class="feature-tab-panel" data-feature-panel="checker">
+                <div class="feature-visual-shell">
+                  <img
+                    src="assets/features/resume-checker.png"
+                    alt="JobHunt AI resume checker dashboard"
+                    onload="this.nextElementSibling.hidden = true"
+                    onerror="this.hidden = true"
+                  />
+                  <div class="feature-fallback checker">
+                    <div class="checker-score">88</div>
+                    <div class="checker-list">
+                      <span></span><span></span><span></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="feature-description-grid">
+                  <div class="feature-description active">
+                    <h3>Resume Score</h3>
+                    <p>
+                      Scan your resume for ATS strength, readability,
+                      formatting, and recruiter fit.
+                    </p>
+                  </div>
+                  <div class="feature-description">
+                    <h3>Missing Keywords</h3>
+                    <p>
+                      See the key skills and phrases your resume should include
+                      for the role.
+                    </p>
+                  </div>
+                  <div class="feature-description">
+                    <h3>Improvement Suggestions</h3>
+                    <p>
+                      Get specific edits that make the resume clearer, stronger,
+                      and more relevant.
+                    </p>
+                  </div>
+                </div>
+              </article>
+            </div>
           </div>
         </div>
       </section>

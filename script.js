@@ -95,6 +95,23 @@
     });
   });
 
+  document.querySelectorAll(".feature-tab").forEach((tab) => {
+    tab.addEventListener("click", () => {
+      const feature = tab.getAttribute("data-feature");
+
+      document.querySelectorAll(".feature-tab").forEach((button) => {
+        button.classList.toggle("active", button === tab);
+      });
+
+      document.querySelectorAll(".feature-tab-panel").forEach((panel) => {
+        panel.classList.toggle(
+          "active",
+          panel.getAttribute("data-feature-panel") === feature,
+        );
+      });
+    });
+  });
+
   const form = document.getElementById("waitlistForm");
   const emailInput = document.getElementById("emailInput");
   const formMessage = document.getElementById("formMessage");

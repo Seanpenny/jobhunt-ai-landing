@@ -1073,6 +1073,263 @@ body::selection {
   color: rgb(212 212 216);
 }
 
+.feature-tabs-showcase {
+  overflow: hidden;
+}
+
+.feature-tabbar {
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: auto;
+  padding: 0.25rem 0.25rem 0.8rem;
+  scrollbar-width: thin;
+}
+
+.feature-tab {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  flex: 0 0 auto;
+  border: 1px solid transparent;
+  border-radius: 0.8rem;
+  padding: 0.72rem 0.92rem;
+  color: rgb(82 82 91);
+  font-size: 0.9rem;
+  font-weight: 900;
+  transition:
+    background 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    color 180ms ease,
+    transform 180ms ease;
+}
+
+.dark .feature-tab {
+  color: rgb(212 212 216);
+}
+
+.feature-tab svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.feature-tab:hover,
+.feature-tab.active {
+  transform: translateY(-1px);
+  border-color: rgba(35, 211, 165, 0.7);
+  background: rgba(35, 211, 165, 0.12);
+  color: rgb(5 46 22);
+  box-shadow:
+    0 0 0 1px rgba(35, 211, 165, 0.1),
+    0 16px 40px rgba(35, 211, 165, 0.14);
+}
+
+.dark .feature-tab:hover,
+.dark .feature-tab.active {
+  color: #7bf0d0;
+}
+
+.feature-tab-panels {
+  border: 1px solid rgba(113, 113, 122, 0.16);
+  border-radius: 1.4rem;
+  background: rgba(255, 255, 255, 0.44);
+  box-shadow: 0 24px 80px rgba(15, 23, 42, 0.12);
+  overflow: hidden;
+}
+
+.dark .feature-tab-panels {
+  border-color: rgba(255, 255, 255, 0.09);
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.feature-tab-panel {
+  display: none;
+  padding: 0;
+}
+
+.feature-tab-panel.active {
+  display: block;
+  animation: fadeRise 280ms ease both;
+}
+
+.feature-visual-shell {
+  position: relative;
+  min-height: clamp(310px, 50vw, 560px);
+  border: 8px solid rgba(35, 211, 165, 0.34);
+  border-radius: 1.1rem 1.1rem 0.4rem 0.4rem;
+  background:
+    radial-gradient(
+      circle at 20% 12%,
+      rgba(35, 211, 165, 0.28),
+      transparent 28%
+    ),
+    linear-gradient(135deg, #08111b, #111827);
+  overflow: hidden;
+}
+
+.feature-visual-shell img {
+  position: relative;
+  z-index: 2;
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: clamp(310px, 50vw, 560px);
+  object-fit: cover;
+}
+
+.feature-fallback {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 2rem;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+  background-size: 42px 42px;
+}
+
+.mini-kanban {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(95px, 1fr));
+  gap: 0.7rem;
+  width: min(95%, 920px);
+}
+
+.mini-kanban span {
+  min-height: 150px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 1rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
+  font-weight: 900;
+  box-shadow: 0 20px 70px rgba(0, 0, 0, 0.22);
+}
+
+.resume-preview-card {
+  width: min(48%, 390px);
+  height: 74%;
+  border-radius: 1rem;
+  background: white;
+  box-shadow: 24px 24px 0 rgba(255, 255, 255, 0.1);
+}
+
+.suggestion-stack,
+.match-breakdown-preview,
+.browser-form-preview,
+.checker-list {
+  position: absolute;
+  right: 7%;
+  width: min(35%, 360px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 1rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 20px 70px rgba(0, 0, 0, 0.22);
+}
+
+.suggestion-stack {
+  height: 55%;
+}
+
+.match-score-preview,
+.checker-score {
+  display: grid;
+  place-items: center;
+  width: clamp(8rem, 18vw, 12rem);
+  height: clamp(8rem, 18vw, 12rem);
+  border: 10px solid #23d3a5;
+  border-radius: 999px;
+  color: white;
+  font-size: clamp(2.4rem, 6vw, 4.5rem);
+  font-weight: 950;
+  box-shadow: 0 0 55px rgba(35, 211, 165, 0.32);
+}
+
+.match-breakdown-preview,
+.checker-list {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.match-breakdown-preview span,
+.checker-list span,
+.browser-form-preview span {
+  display: block;
+  height: 0.9rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.browser-form-preview {
+  left: 7%;
+  right: auto;
+  width: min(64%, 680px);
+}
+
+.browser-form-preview span {
+  height: 2.4rem;
+  margin-top: 0.8rem;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.browser-form-preview button {
+  margin-top: 1rem;
+  border-radius: 999px;
+  padding: 0.8rem 1rem;
+  background: #23d3a5;
+  color: #08111b;
+  font-weight: 950;
+}
+
+.feature-description-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  padding: 1rem 0 0;
+}
+
+.feature-description {
+  min-height: 105px;
+  border: 1px solid rgba(113, 113, 122, 0.2);
+  border-radius: 0.8rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.52);
+}
+
+.dark .feature-description {
+  border-color: rgba(255, 255, 255, 0.11);
+  background: rgba(255, 255, 255, 0.045);
+}
+
+.feature-description.active {
+  border-color: rgba(35, 211, 165, 0.9);
+  box-shadow: 0 16px 42px rgba(35, 211, 165, 0.12);
+}
+
+.feature-description h3 {
+  color: rgb(67 56 202);
+  font-size: 0.98rem;
+  font-weight: 950;
+}
+
+.dark .feature-description h3 {
+  color: #a7f3d0;
+}
+
+.feature-description p {
+  margin-top: 0.35rem;
+  color: rgb(82 82 91);
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+.dark .feature-description p {
+  color: rgb(212 212 216);
+}
+
 .comparison-head {
   display: flex;
   align-items: center;
@@ -1599,6 +1856,29 @@ body::selection {
     grid-column: 1 / -1;
   }
 
+  .feature-description-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mini-kanban {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .suggestion-stack,
+  .match-breakdown-preview,
+  .browser-form-preview,
+  .checker-list {
+    left: 50%;
+    right: auto;
+    width: min(82%, 420px);
+    transform: translateX(-50%);
+  }
+
+  .resume-preview-card {
+    width: min(70%, 330px);
+    height: 62%;
+  }
+
   .tracker-kanban {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -1622,6 +1902,21 @@ body::selection {
   .showcase-screen,
   .screen-panel {
     min-height: 520px;
+  }
+
+  .feature-tab {
+    padding: 0.64rem 0.75rem;
+    font-size: 0.82rem;
+  }
+
+  .feature-visual-shell,
+  .feature-visual-shell img {
+    min-height: 260px;
+  }
+
+  .mini-kanban span {
+    min-height: 92px;
+    font-size: 0.78rem;
   }
 
   .mail-list div,
