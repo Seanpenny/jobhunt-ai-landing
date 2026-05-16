@@ -436,6 +436,17 @@ body::selection {
     linear-gradient(135deg, rgba(12, 15, 20, 0.98), rgba(9, 9, 11, 0.96));
 }
 
+.hero-demo-video {
+  position: relative;
+  z-index: 2;
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 500px;
+  background: #09090b;
+  object-fit: contain;
+}
+
 .hero-video-frame::before {
   content: "";
   position: absolute;
@@ -1273,6 +1284,11 @@ body::selection {
 
   .dashboard-grid {
     min-height: auto;
+  }
+
+  .hero-video-frame,
+  .hero-demo-video {
+    min-height: 280px;
   }
 
   .showcase-screen,
