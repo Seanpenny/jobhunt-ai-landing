@@ -405,6 +405,170 @@ body::selection {
   color: white;
 }
 
+.hero-video-shell .dashboard-grid {
+  display: block;
+  min-height: auto;
+  aspect-ratio: 16 / 10;
+}
+
+.hero-video-shell .dashboard-sidebar,
+.hero-video-shell .dashboard-main {
+  display: none;
+}
+
+.hero-video-frame {
+  position: relative;
+  min-height: 500px;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 1.4rem;
+  background:
+    radial-gradient(
+      circle at 20% 15%,
+      rgba(35, 211, 165, 0.28),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 82% 18%,
+      rgba(66, 198, 255, 0.2),
+      transparent 30%
+    ),
+    linear-gradient(135deg, rgba(12, 15, 20, 0.98), rgba(9, 9, 11, 0.96));
+}
+
+.hero-video-frame::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+  background-size: 38px 38px;
+  mask-image: radial-gradient(circle at center, black, transparent 78%);
+}
+
+.video-noise {
+  position: absolute;
+  inset: 0;
+  opacity: 0.24;
+  background-image:
+    linear-gradient(
+      120deg,
+      transparent 0 44%,
+      rgba(255, 255, 255, 0.08) 45%,
+      transparent 46%
+    ),
+    radial-gradient(
+      circle at 48% 45%,
+      rgba(255, 255, 255, 0.12),
+      transparent 18%
+    );
+  pointer-events: none;
+}
+
+.video-player-content {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  align-content: space-between;
+  min-height: 500px;
+  height: 100%;
+  padding: clamp(1rem, 3vw, 1.45rem);
+}
+
+.video-brand-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.hero-play-button {
+  place-self: center;
+  display: grid;
+  place-items: center;
+  width: clamp(5rem, 11vw, 6.8rem);
+  height: clamp(5rem, 11vw, 6.8rem);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 999px;
+  background:
+    linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.22),
+        rgba(255, 255, 255, 0.08)
+      )
+      padding-box,
+    linear-gradient(135deg, rgba(35, 211, 165, 0.8), rgba(66, 198, 255, 0.55))
+      border-box;
+  color: white;
+  box-shadow:
+    0 0 0 12px rgba(255, 255, 255, 0.045),
+    0 28px 80px rgba(35, 211, 165, 0.22);
+  backdrop-filter: blur(18px);
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.hero-play-button:hover {
+  transform: scale(1.04);
+  box-shadow:
+    0 0 0 16px rgba(255, 255, 255, 0.055),
+    0 34px 90px rgba(66, 198, 255, 0.25);
+}
+
+.video-copy {
+  max-width: 560px;
+}
+
+.video-copy h3 {
+  margin-top: 0.45rem;
+  font-size: clamp(1.45rem, 3vw, 2.35rem);
+  font-weight: 900;
+  line-height: 1.06;
+  letter-spacing: 0;
+}
+
+.video-copy p:not(.tiny-label) {
+  margin-top: 0.7rem;
+  max-width: 520px;
+  color: rgb(212 212 216);
+  line-height: 1.7;
+}
+
+.video-progress {
+  height: 0.44rem;
+  margin-top: 1rem;
+  overflow: hidden;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.video-progress span {
+  display: block;
+  width: 38%;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #23d3a5, #42c6ff);
+}
+
+.video-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin-top: 0.9rem;
+}
+
+.video-chips span {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+  padding: 0.52rem 0.72rem;
+  background: rgba(255, 255, 255, 0.07);
+  color: rgb(228 228 231);
+  font-size: 0.76rem;
+  font-weight: 800;
+}
+
 .dashboard-sidebar {
   border-right: 1px solid rgba(255, 255, 255, 0.09);
   padding: 1rem;
